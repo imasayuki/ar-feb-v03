@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-sphere position="0 1.25 0" radius="1.25" src="https://cdn.glitch.com/65aeb152-eaae-4cfb-8caf-6eeb287f6437%2Fearth.jpg?v=1615424610111" shadow
+                  animation = "
+                             property : rotation;
+                             dur : 10000;
+                             from : 0 0 0;
+                             to : 0 360 0;
+                             loop : -1;
+                             easing : linear;
+                             "    
+                  >
+        </a-sphere>
+      </a-marker>
+      
+      <a-marker type="pattern" url="https://cdn.glitch.global/b2e08ad4-ac10-4e12-b696-4f2ece74f0c2/pattern-ITOH.patt?v=1707370008589">
+        <a-sphere position="0 1.25 0" radius="0.5" >
+         </a-sphere>
+        </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
